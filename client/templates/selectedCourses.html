@@ -1,0 +1,96 @@
+<div class="selected">
+
+    <div class="selected-title">
+    <div ng-if="ctrl.data.selectedCourses.length == 1">
+        {{ctrl.data.selectedCourses.length}} course selected total
+        </div>
+
+    <div ng-if="ctrl.data.selectedCourses.length != 1">
+    {{ctrl.data.selectedCourses.length}} courses selected total
+        </div>
+    </div>
+
+    <div ng-if="ctrl.data.selectedCourses.length != 0">
+
+
+
+        <h5> </h5>
+
+
+
+        <div ng-repeat="selectedCourse in ctrl.data.selectedCourses" class="selected-courses" >
+            <div class="selected-cancel" ng-click="ctrl.data.removeSelectedSection(selectedCourse)">X</div>
+
+
+          <div>   {{selectedCourse.course.number}} - {{selectedCourse.course.name}}</div>
+      <!--  <div>    Professor {{selectedCourse.section.professor}}, Section {{selectedCourse.section.name}} </div> */ &#x2613 -->
+
+        </div>
+
+        </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+    <!--
+
+    <h3>Most recent course: </h3>
+  <div>{{selectedCourse.course.number}} - {{ctrl.data.highlightedCourse.course.name}}</div>
+    <div>Professor {{ctrl.data.highlightedCourse.section.professor}}     Section: {{ctrl.data.highlightedCourse.section.name}} </div>
+
+    <h5> {{ctrl.data.selectedCourses[0].course.number}} - {{ctrl.data.selectedCourses[0].course.name}}</h5>
+    <h5>   Professor {{ctrl.data.selectedCourses[0].section.professor}}, Section: {{ctrl.data.selectedCourses[0].section.name}}  </h5>
+
+
+    <h5> {{ctrl.data.selectedCourses[1].course.number}} - {{ctrl.data.selectedCourses[1].course.name}}</h5>
+    <h5>   Professor {{ctrl.data.selectedCourses[1].section.professor}}, Section: {{ctrl.data.selectedCourses[1].section.name}}  </h5>
+
+    <h5> {{ctrl.data.selectedCourses[2].course.number}} - {{ctrl.data.selectedCourses[2].course.name}}</h5>
+    <h5>  Professor {{ctrl.data.selectedCourses[2].section.professor}}, Section: {{ctrl.data.selectedCourses[2].section.name}}  </h5>
+
+    <h5> {{ctrl.data.selectedCourses[3].course.number}} - {{ctrl.data.selectedCourses[3].course.name}}</h5>
+    <h5>   Professor {{ctrl.data.selectedCourses[3].section.professor}}, Section: {{ctrl.data.selectedCourses[3].section.name}}  </h5>
+
+    <h5> {{ctrl.data.selectedCourses[4].course.number}} - {{ctrl.data.selectedCourses[4].course.name}}</h5>
+    <h5>   Professor {{ctrl.data.selectedCourses[4].section.professor}}, Section: {{ctrl.data.selectedCourses[4].section.name}}  </h5>
+
+    <div ng-app="" ng-init="selectedCourseCounter=0;">
+
+
+        <h5> {{ctrl.data.selectedCourses[selectedCourseCounter].course.number}} - {{ctrl.data.selectedCourses[selectedCourseCounter].course.name}}</h5>
+        <h5>   Professor {{ctrl.data.selectedCourses[selectedCourseCounter].section.professor}}, Section: {{ctrl.data.selectedCourses[selectedCourseCounter].section.name}}  </h5>
+
+
+
+    <h5> {{ctrl.data.selectedCourses[1].course.number}} - {{ctrl.data.selectedCourses[1].course.name}} - {{ctrl.data.selectedCourses[1].section.professor}} - {{ctrl.data.selectedCourses[1].section.course}}  </h5>
+    <h5> {{ctrl.data.selectedCourses[2].course.number}} - {{ctrl.data.selectedCourses[2].course.name}} - {{ctrl.data.selectedCourses[2].section.professor}} - {{ctrl.data.selectedCourses[2].section.course}}  </h5>
+    <h5> {{ctrl.data.selectedCourses[3].course.number}} - {{ctrl.data.selectedCourses[3].course.name}} - {{ctrl.data.selectedCourses[3].section.professor}} - {{ctrl.data.selectedCourses[3].section.course}}  </h5>
+    <h5> {{ctrl.data.selectedCourses[4].course.number}} - {{ctrl.data.selectedCourses[4].course.name}} - {{ctrl.data.selectedCourses[4].section.professor}} - {{ctrl.data.selectedCourses[4].section.course}}  </h5>
+
+
+
+     <h5> {{ctrl.data.selectedCourses[0].number}} - {{ctrl.data.selectedCourses[0].name}} {{ctrl.data.selectedCourses[0].section}}</h5>
+
+    <h5>{{ctrl.data.selectedCourses[1].number}} - {{ctrl.data.selectedCourses[1].name}}</h5>
+    <h5>{{ctrl.data.selectedCourses[2].number}} - {{ctrl.data.selectedCourses[2].name}}</h5>
+    <h5>{{ctrl.data.selectedCourses[3].number}} - {{ctrl.data.selectedCourses[3].name}}</h5>
+    <h5>{{ctrl.data.selectedCourses[4].number}} - {{ctrl.data.selectedCourses[4].name}}</h5>
+    <h5>{{ctrl.data.selectedCourses[5].number}} - {{ctrl.data.selectedCourses[5].name}}</h5>
+    <h5>{{ctrl.data.selectedCourses[6].number}} - {{ctrl.data.selectedCourses[6].name}}</h5>
+
+    <h5>{{ctrl.data.selectedCourses[1].number}} - {{ctrl.data.selectedCourses[1].name}} {{ctrl.data.selectedCourses[1].section}}</h5>
+    <h5>{{ctrl.data.selectedCourses[2].number}} - {{ctrl.data.selectedCourses[2].name}} {{ctrl.data.selectedCourses[2].section}}</h5>
+    <h5>{{ctrl.data.selectedCourses[3].number}} - {{ctrl.data.selectedCourses[3].name}} {{ctrl.data.selectedCourses[3].section}}</h5>
+    <h5>{{ctrl.data.selectedCourses[4].number}} - {{ctrl.data.selectedCourses[4].name}} {{ctrl.data.selectedCourses[4].section}}</h5>
+</div>
+-->
+

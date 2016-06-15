@@ -1,0 +1,58 @@
+@import "config";
+
+.selected
+{
+background: white;
+  color: white;
+  width: 20%;
+//  height: 30vh;
+//  top: 70vh;
+ // left: 70vw;
+  position: absolute;
+}
+
+.selected-title
+{
+  background: $stevensRed;
+font-size: 2.1rem;
+ // border-bottom: 5px black solid;
+  padding: .5rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+.selected-courses
+{
+  font-size: small;
+  padding: .5rem;
+  font-weight: 900;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  order: 1;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background: whitesmoke;
+  color: black;
+}
+
+.selected-cancel
+{
+  color: black;
+  order: 2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: .8rem;
+ // display: flex;
+//  justify-content: flex-end;
+
+}
+
+
+.selected-class
+{
+  background:slategray;
+  color:black;
+}

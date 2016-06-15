@@ -1,0 +1,87 @@
+<div class="search">
+    <span id="SearchBarHeader"><h2>Course List <h5 ng-mouseover="ctrl.displayHelp()" ng-mouseleave="ctrl.hideHelp()">?</h5></h2></span>
+
+    <div class="search-bar">
+        <input type="text"
+               placeholder="Search"
+               ng-model="ctrl.query"/>
+
+
+    </div>
+
+
+    <!-- help document about search tips  ng-show="ctrl.showHelp" -->
+    <div   class="query-syntax-help closed" id="query-syntax-help">
+        <br />
+        Search like this:<br/>
+        <br />
+        cs 500 wed <br/>
+        <br />
+        Result:<br />
+        <br />
+        Courses between 500 to 599<br />
+        belonging to CS<br />
+        on Wednesday.
+        <br />
+        (WebCampus keywords: WS)
+        <br />
+    </div>
+
+
+
+    <!-- make another class : selected-list-item -->
+    <div class="search-list">
+
+
+        <div ng-repeat="course in (filteredCourses =(ctrl.data.courseList | filter: ctrl.filterCourses|limitTo:10000))"
+             ng-controller="SearchItemController as searchCtrl"
+             class="search-list-item"
+             ng-mouseenter="searchCtrl.highlightCourse(course, ctrl.data)"
+             ng-mouseleave="searchCtrl.removeHighlightedCourse(ctrl.data)"
+             ng-click="searchCtrl.selectCourse(course, ctrl.data)">
+            <h5>{{course.name}}</h5>
+
+            <div class="search-sub-content">
+                <h6>
+                    {{course.number}}
+                </h6>
+                <h6 ng-show="course.sections.length > 1">{{course.sections.length}} sections</h6>
+                <h6 ng-show="course.sections.length == 1">
+                    <nobr>{{course.sections[0].professor}}</nobr>
+                </h6>
+
+            </div>
+
+            <div ng-show="(course.sections.length > 1 && searchCtrl.expanded)||filteredCourses.length<5"
+                 class="sections">
+                <div ng-repeat="section in course.sections"
+                     ng-mouseenter="searchCtrl.highlightSection(course, section, ctrl.data)"
+                     ng-mouseleave="searchCtrl.removeHighlightedSection(ctrl.data)"
+                     ng-click="searchCtrl.selectSection(course, section, ctrl.data)">
+                    <h6>{{section.name}}</h6>
+                    <h6>
+                        <nobr>{{section.professor}}</nobr>
+                    </h6>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- show message when user scrolled down to the bottom-->
+        <!--<div ng-show="(ctrl.showHalfResults==460)&&filteredCourses.length>459" id="showMoreResults">
+            <h2 ng-click="ctrl.showMoreResults()">Show more results</h2>
+        </div>-->
+
+
+        <!-- show message when no result was found -->
+        <div ng-show="!filteredCourses.length" id="noSearchResultMessage">
+            <br />
+            <h3>No Result Found</h3><br/>
+
+            <h4>(Hover on <span>?</span> besides Course List for help)</h4>
+        </div>
+
+
+    </div>
+    <!-- Search-List -->
+</div>

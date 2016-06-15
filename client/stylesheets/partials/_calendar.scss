@@ -1,0 +1,114 @@
+@import "config";
+
+.calendar {
+  background: whitesmoke;
+  cursor: default;
+  flex-grow: 2;
+}
+
+.calendar-days {
+  padding-left: 10%;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calendar-days li
+{
+  display: inline-flex;
+  flex-grow: 10;
+  justify-content: space-between;
+
+}
+
+.calendar-container {
+  display: flex;
+  // background: green;
+  margin-left: 20px;
+  width: 95%;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: slategray;
+  border-width: thin;
+  border-radius: .5rem;
+}
+
+.calendar-times {
+  display: flex;
+  flex-flow: column;
+  // background: orange;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  height: 100%;
+  padding-right: 1rem;
+}
+
+.calendar-times p {
+  // background: green;
+}
+
+.calendar-bubbles {
+  // background: blue;
+  // border-style: solid;
+  // border-width: 0.15rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  height: 95%;
+}
+
+.calendar-course-bubble {
+  background: red;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  position: absolute;
+  opacity: 0.7;
+  width: 20%;
+}
+
+.calendar-lines-days {
+  border-style: solid;
+  border-width: 0.2rem;
+}
+
+.calendar-course-bubble-text {
+  font-size: 0.7rem;
+  position: absolute;
+}
+
+.calendar-course-bubble-smalltext {
+  font-size: 0.6rem;
+}
+
+.calendar-cancel {
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.6;
+  font-size: 0.5rem;
+}
+
+.calendar-course-bubble-ghost {
+  background: slategray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  position: absolute;
+  opacity: 0.35;
+  width: 20%;
+}

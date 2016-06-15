@@ -1,0 +1,109 @@
+$tiny-font-size: .694rem;
+$tiny-line-height: 1.5rem;
+$small-font-size: .833rem;
+$small-line-height: 1.5rem;
+$base-font-size: 18px;
+$base-line-height: 1.5rem;
+$medium-font-size: 1.2rem;
+$medium-line-height: 1.5rem;
+$large-font-size: 1.44rem;
+$large-line-height: 3rem;
+$xlarge-font-size: 1.728rem;
+$xlarge-line-height: 3rem;
+$xxlarge-font-size: 2.074rem;
+$xxlarge-line-height: 3rem;
+
+%reset {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+// Typography
+@mixin typeSize($type) {
+  @if $type == "xsmall" {
+    font-size: $tiny-font-size;
+    line-height: $tiny-line-height;
+  }
+  @if $type == "small" {
+    font-size: $small-font-size;
+    line-height: $small-line-height;
+  }
+  @if $type == "base" {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+  }
+  @if $type == "medium" {
+    font-size: $medium-font-size;
+    line-height: $medium-line-height;
+  }
+  @if $type == "large" {
+    font-size: $large-font-size;
+    line-height: $large-line-height;
+  }
+  @if $type == "xlarge" {
+    font-size: $xlarge-font-size;
+    line-height: $xlarge-line-height;
+  }
+  @if $type == "xxlarge" {
+    font-size: $xxlarge-font-size;
+    line-height: $xxlarge-line-height;
+  }
+}
+
+%type-xsmall {
+  @include typeSize("xsmall");
+}
+
+%type-small {
+  @include typeSize("small");
+}
+
+%type-base {
+  @include typeSize("base");
+}
+
+%type-medium {
+  @include typeSize("medium");
+}
+
+%type-large {
+  @include typeSize("large");
+}
+
+%type-xlarge {
+  @include typeSize("xlarge");
+}
+
+%type-xxlarge {
+  @include typeSize("xxlarge");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %reset;
+  padding: 0 1rem;
+}
+
+h1 {
+  @extend %type-xxlarge;
+}
+
+h2 {
+  @extend %type-xlarge;
+}
+
+h3 {
+  @extend %type-large;
+}
+
+h4 {
+  @extend %type-medium;
+}
+
+h5 {
+  @extend %type-base;
+}
+
+h6 {
+  @extend %type-small;
+}

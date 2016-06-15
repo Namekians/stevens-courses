@@ -1,0 +1,305 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+h6 {
+  font-size: 0.833rem;
+  line-height: 1.5rem; }
+
+h5 {
+  font-size: 18px;
+  line-height: 1.5rem; }
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5rem; }
+
+h3 {
+  font-size: 1.44rem;
+  line-height: 3rem; }
+
+h2 {
+  font-size: 1.728rem;
+  line-height: 3rem; }
+
+h1 {
+  font-size: 2.074rem;
+  line-height: 3rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0 1rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+h6 {
+  font-size: 0.833rem;
+  line-height: 1.5rem; }
+
+h5 {
+  font-size: 18px;
+  line-height: 1.5rem; }
+
+h4 {
+  font-size: 1.2rem;
+  line-height: 1.5rem; }
+
+h3 {
+  font-size: 1.44rem;
+  line-height: 3rem; }
+
+h2 {
+  font-size: 1.728rem;
+  line-height: 3rem; }
+
+h1 {
+  font-size: 2.074rem;
+  line-height: 3rem; }
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0 1rem; }
+
+.search {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap; }
+  .search h2 {
+    padding-left: .75rem;
+    background: #800000;
+    color: white;
+    margin-right: 0;
+    display: inline; }
+  .search span h5 {
+    color: white;
+    display: inline; }
+  .search #SearchBarHeader {
+    background: #800000;
+    width: 100%; }
+  .search #SearchBarHeader span {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-left: 0.6rem; }
+  .search .query-syntax-help.closed {
+    max-height: 0; }
+  .search .query-syntax-help {
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    left: 0;
+    top: 0;
+    background: #56616c;
+    overflow-y: hidden;
+    height: 100%;
+    max-height: 500px;
+    /* approximate max height */
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); }
+  .search .search-bar {
+    box-sizing: border-box;
+    padding-bottom: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    background: #800000; }
+  .search input[type="text"] {
+    box-sizing: border-box;
+    width: 23rem;
+    height: 2.0rem;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white; }
+  .search ::-webkit-input-placeholder {
+    color: white; }
+  .search .search-list {
+    overflow: scroll;
+    flex: 1; }
+  .search .search-list-item {
+    padding: .75rem 0;
+    border-bottom: #ECECEC 1px solid;
+    transition: background-color 200ms; }
+    .search .search-list-item:hover {
+      background-color: #ECECEC; }
+  .search .search-sub-content {
+    display: flex;
+    color: #6C7A89; }
+  .search h6 {
+    width: 5rem; }
+  .search .sections > div {
+    display: flex;
+    transition: background-color 200ms; }
+    .search .sections > div:hover {
+      background-color: #dfdfdf; }
+
+.calendar {
+  background: whitesmoke;
+  cursor: default;
+  flex-grow: 2; }
+
+.calendar-days {
+  padding-left: 10%;
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.calendar-days li {
+  display: inline-flex;
+  flex-grow: 10;
+  justify-content: space-between; }
+
+.calendar-container {
+  display: flex;
+  margin-left: 20px;
+  width: 95%;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  border-color: slategray;
+  border-width: thin;
+  border-radius: .5rem; }
+
+.calendar-times {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  height: 100%;
+  padding-right: 1rem; }
+
+.calendar-bubbles {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+  height: 95%; }
+
+.calendar-course-bubble {
+  background: red;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  position: absolute;
+  opacity: 0.7;
+  width: 20%; }
+
+.calendar-lines-days {
+  border-style: solid;
+  border-width: 0.2rem; }
+
+.calendar-course-bubble-text {
+  font-size: 0.7rem;
+  position: absolute; }
+
+.calendar-course-bubble-smalltext {
+  font-size: 0.6rem; }
+
+.calendar-cancel {
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: bold;
+  opacity: 0.6;
+  font-size: 0.5rem; }
+
+.calendar-course-bubble-ghost {
+  background: slategray;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  height: 50%;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  position: absolute;
+  opacity: 0.35;
+  width: 20%; }
+
+.selected {
+  background: white;
+  color: white;
+  width: 20%;
+  position: absolute; }
+
+.selected-title {
+  background: #800000;
+  font-size: 2.1rem;
+  padding: .5rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); }
+
+.selected-courses {
+  font-size: small;
+  padding: .5rem;
+  font-weight: 900;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  order: 1;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 1px;
+  background: whitesmoke;
+  color: black; }
+
+.selected-cancel {
+  color: black;
+  order: 2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: .8rem; }
+
+.selected-class {
+  background: slategray;
+  color: black; }
+
+html {
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #56616c; }
+
+body {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  align-items: stretch;
+  background-color: white; }
+
+#info {
+  flex: 1;
+  height: 100%; }
+
+#sidebar {
+  width: 25rem;
+  height: 100%; }
+
+.node {
+  background: orange;
+  height: 0%; }
+
+.calendar {
+  height: 100%; }
+
+.selected {
+  height: 30%; }
+
+/*# sourceMappingURL=main.css.map */
